@@ -1,0 +1,151 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.app-layout {
+  display: flex;
+  height: 100vh;
+}
+
+nav {
+  width: 220px;
+  background-color: #ffffff;
+  padding: 20px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+  z-index: 10;
+}
+
+.main-section {
+  margin-left: 230px; /* width of sidebar */
+
+  display: flex;
+  flex-direction: column;
+}
+
+.pages {
+  list-style: none;
+}
+
+.pages li {
+  margin-bottom: 3rem;
+}
+
+.title {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  font-weight: bold;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: larger;
+}
+
+.search-bar {
+  width: 60%;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  outline: none;
+  margin: 2rem;
+  margin-left: 5rem;
+}
+
+.search-bar .search-form {
+  height: 2rem;
+  width: 100%;
+  position: relative;
+}
+
+.search-bar .search-form span {
+  color: black;
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+}
+
+.search-bar .search-input {
+  width: 92%;
+  height: 100%;
+  outline: none;
+  color: black;
+  font-size: 1rem;
+  border-radius: 6px;
+  padding: 0 20px 0 50px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.search-bar .search-input:focus {
+  border-color: #2977b6;
+}
+
+.search-bar .search-input::placeholder {
+  color: black;
+  text-transform: none;
+}
+
+.content-area {
+  background-color: #fdfdfd;
+  width: 75vw;
+  margin: 50px;
+}
+
+.recipe-card {
+  flex-shrink: 0;
+  min-width: 200px;
+  max-width: 300px;
+  height: 50vh;
+  border: 1px solid black;
+  border-radius: 1rem;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+  overflow-y: auto;
+}
+
+.description {
+  font-size: small;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid black;
+  border-radius: 1rem;
+  padding: 5px;
+  overflow-y: auto;
+}
+
+.image {
+  width: 100%;
+  height: 50%;
+  border: 1px solid black;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+.featured {
+  display: flex;
+  flex: column;
+  overflow-x: auto;
+  gap: 20px;
+  padding-right: 2rem;
+}
